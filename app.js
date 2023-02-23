@@ -2,6 +2,7 @@
 window.addEventListener("click", button);
 
 let number = 0;
+let text = document.querySelector("#message");
 
 function button() {
   document.querySelector("#btn-increment").addEventListener("click", numberUp);
@@ -11,7 +12,7 @@ function button() {
 function numberUp() {
   console.log("plus-knap");
   console.log(number);
-  number += 2000;
+  number++;
   displayNumber();
 }
 function numberDown() {
@@ -22,6 +23,15 @@ function numberDown() {
 }
 function displayNumber() {
   document.querySelector("#number").textContent = number;
-  let message = `The number is: ${number}`;
-  document.querySelector("#message").textContent = message;
+  let based = `The number is: ${number} which is BASED`;
+  let ten = `The number is: ${number} which is exactly 10!`;
+  let cringe = `The number is: ${number} which is CRINGE`;
+
+  if (number > 10) {
+    text.textContent = based;
+  } else if (number == 10) {
+    text.textContent = ten;
+  } else {
+    text.textContent = cringe;
+  }
 }
