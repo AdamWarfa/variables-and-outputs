@@ -1,6 +1,11 @@
 "use strict";
 window.addEventListener("click", button);
 
+let firstName = "john";
+let lastName = "Doe";
+let fullName = `${firstName} ${lastName}`;
+console.log(fullName);
+
 let number = 0;
 let text = document.querySelector("#message");
 
